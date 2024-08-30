@@ -33,12 +33,44 @@ namespace Xbee_Ground_Station
         private string ICAO, ICAO0001, ICAO0002, ICAO0003, ICAO0004;
         private string ICAOname, ICAO2, ICAOname2, ICAO3, ICAOname3, ICAO4, ICAOname4;
         private string EPSBattertl, EPS33l, EPS5l, VGPSD, VMTQD, VADSBD, VUHFD, TBD, TED, TOD, time, ACX, ACY, ACZ;
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gup_MessageDisplay_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
         private string SUN_H1, X_TXT, Y_TXT, Z_TXT, YTT, GXX, GYY, GZZ, MX, MY, MZ, GPSN, GPST, GPS1, GPS1N, GPS2, GPS2N;
         StreamWriter writer;
 
         public Form1()
         {
             InitializeComponent();
+            
             // After initialization, refresh the COM ports.
             RefreshComPorts();
 
@@ -46,6 +78,7 @@ namespace Xbee_Ground_Station
             gup_InputData.Enabled = false;
             gup_MessageDisplay.Enabled = false;
             gup_OutputData.Enabled = false;
+            
         }
 
         // UI Interaction Handlers
