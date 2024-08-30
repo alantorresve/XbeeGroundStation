@@ -67,8 +67,8 @@
             this.timer_accept = new System.Windows.Forms.Timer(this.components);
             this.btn_SendData = new System.Windows.Forms.Button();
             this.gup_OutputData = new System.Windows.Forms.GroupBox();
-            this.Zdirection = new System.Windows.Forms.ComboBox();
-            this.Ydirection = new System.Windows.Forms.ComboBox();
+            this.ZDirection = new System.Windows.Forms.ComboBox();
+            this.YDirection = new System.Windows.Forms.ComboBox();
             this.yaxis = new System.Windows.Forms.Label();
             this.zaxis = new System.Windows.Forms.Label();
             this.XDirection = new System.Windows.Forms.ComboBox();
@@ -548,8 +548,8 @@
             // 
             // gup_OutputData
             // 
-            this.gup_OutputData.Controls.Add(this.Zdirection);
-            this.gup_OutputData.Controls.Add(this.Ydirection);
+            this.gup_OutputData.Controls.Add(this.ZDirection);
+            this.gup_OutputData.Controls.Add(this.YDirection);
             this.gup_OutputData.Controls.Add(this.yaxis);
             this.gup_OutputData.Controls.Add(this.zaxis);
             this.gup_OutputData.Controls.Add(this.XDirection);
@@ -568,35 +568,35 @@
             this.gup_OutputData.TabStop = false;
             this.gup_OutputData.Text = "脈波參數";
             // 
-            // Zdirection
+            // ZDirection
             // 
-            this.Zdirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Zdirection.FormattingEnabled = true;
-            this.Zdirection.Items.AddRange(new object[] {
+            this.ZDirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZDirection.FormattingEnabled = true;
+            this.ZDirection.Items.AddRange(new object[] {
             "Forward",
             "Backward"});
-            this.Zdirection.Location = new System.Drawing.Point(117, 92);
-            this.Zdirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Zdirection.MaxDropDownItems = 2;
-            this.Zdirection.Name = "Zdirection";
-            this.Zdirection.Size = new System.Drawing.Size(99, 28);
-            this.Zdirection.TabIndex = 118;
-            this.Zdirection.Text = "Direction";
+            this.ZDirection.Location = new System.Drawing.Point(117, 92);
+            this.ZDirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ZDirection.MaxDropDownItems = 2;
+            this.ZDirection.Name = "ZDirection";
+            this.ZDirection.Size = new System.Drawing.Size(99, 28);
+            this.ZDirection.TabIndex = 118;
+            this.ZDirection.Text = "Direction";
             // 
-            // Ydirection
+            // YDirection
             // 
-            this.Ydirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ydirection.FormattingEnabled = true;
-            this.Ydirection.Items.AddRange(new object[] {
+            this.YDirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YDirection.FormattingEnabled = true;
+            this.YDirection.Items.AddRange(new object[] {
             "Forward",
             "Backward"});
-            this.Ydirection.Location = new System.Drawing.Point(117, 61);
-            this.Ydirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Ydirection.MaxDropDownItems = 2;
-            this.Ydirection.Name = "Ydirection";
-            this.Ydirection.Size = new System.Drawing.Size(99, 28);
-            this.Ydirection.TabIndex = 117;
-            this.Ydirection.Text = "Direction";
+            this.YDirection.Location = new System.Drawing.Point(117, 61);
+            this.YDirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.YDirection.MaxDropDownItems = 2;
+            this.YDirection.Name = "YDirection";
+            this.YDirection.Size = new System.Drawing.Size(99, 28);
+            this.YDirection.TabIndex = 117;
+            this.YDirection.Text = "Direction";
             // 
             // yaxis
             // 
@@ -806,8 +806,8 @@
         private System.Windows.Forms.TextBox xparamtextbox;
         private System.Windows.Forms.Label yaxis;
         private System.Windows.Forms.Label zaxis;
-        private System.Windows.Forms.ComboBox Ydirection;
-        private System.Windows.Forms.ComboBox Zdirection;
+        private System.Windows.Forms.ComboBox YDirection;
+        private System.Windows.Forms.ComboBox ZDirection;
         private System.Windows.Forms.PictureBox Logo;
     }
 }
