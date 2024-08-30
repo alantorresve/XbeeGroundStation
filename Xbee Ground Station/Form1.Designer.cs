@@ -67,20 +67,22 @@
             this.timer_accept = new System.Windows.Forms.Timer(this.components);
             this.btn_SendData = new System.Windows.Forms.Button();
             this.gup_OutputData = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Zdirection = new System.Windows.Forms.ComboBox();
+            this.Ydirection = new System.Windows.Forms.ComboBox();
+            this.yaxis = new System.Windows.Forms.Label();
+            this.zaxis = new System.Windows.Forms.Label();
+            this.XDirection = new System.Windows.Forms.ComboBox();
+            this.Xaxis = new System.Windows.Forms.Label();
             this.zparamtextbox = new System.Windows.Forms.TextBox();
             this.yparamtextbox = new System.Windows.Forms.TextBox();
             this.xparamtextbox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.gup_ComPortState.SuspendLayout();
             this.gup_InputData.SuspendLayout();
             this.gup_MessageDisplay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.gup_OutputData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // gup_ComPortState
@@ -92,7 +94,7 @@
             this.gup_ComPortState.Controls.Add(this.Label1);
             this.gup_ComPortState.Controls.Add(this.comboCOM);
             this.gup_ComPortState.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gup_ComPortState.Location = new System.Drawing.Point(12, 12);
+            this.gup_ComPortState.Location = new System.Drawing.Point(7, 11);
             this.gup_ComPortState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gup_ComPortState.Name = "gup_ComPortState";
             this.gup_ComPortState.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -171,7 +173,7 @@
             this.gup_InputData.Controls.Add(this.btn_ReceiveData);
             this.gup_InputData.Controls.Add(this.txt_InputData);
             this.gup_InputData.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gup_InputData.Location = new System.Drawing.Point(12, 159);
+            this.gup_InputData.Location = new System.Drawing.Point(7, 158);
             this.gup_InputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gup_InputData.Name = "gup_InputData";
             this.gup_InputData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -214,6 +216,7 @@
             // 
             this.gup_MessageDisplay.AutoSize = true;
             this.gup_MessageDisplay.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.gup_MessageDisplay.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gup_MessageDisplay.Controls.Add(this.btn_ResetChartView);
             this.gup_MessageDisplay.Controls.Add(this.chart1);
             this.gup_MessageDisplay.Controls.Add(this.textBox6);
@@ -236,11 +239,12 @@
             this.gup_MessageDisplay.Controls.Add(this.txt_MessageOut);
             this.gup_MessageDisplay.Controls.Add(this.textBox3);
             this.gup_MessageDisplay.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gup_MessageDisplay.Location = new System.Drawing.Point(248, 26);
+            this.gup_MessageDisplay.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gup_MessageDisplay.Location = new System.Drawing.Point(254, 30);
             this.gup_MessageDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gup_MessageDisplay.Name = "gup_MessageDisplay";
             this.gup_MessageDisplay.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gup_MessageDisplay.Size = new System.Drawing.Size(725, 526);
+            this.gup_MessageDisplay.Size = new System.Drawing.Size(725, 544);
             this.gup_MessageDisplay.TabIndex = 16;
             this.gup_MessageDisplay.TabStop = false;
             this.gup_MessageDisplay.Text = "主系統狀態";
@@ -251,7 +255,7 @@
             this.btn_ResetChartView.AutoSize = true;
             this.btn_ResetChartView.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_ResetChartView.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ResetChartView.Location = new System.Drawing.Point(607, 369);
+            this.btn_ResetChartView.Location = new System.Drawing.Point(617, 352);
             this.btn_ResetChartView.Name = "btn_ResetChartView";
             this.btn_ResetChartView.Size = new System.Drawing.Size(79, 30);
             this.btn_ResetChartView.TabIndex = 76;
@@ -261,12 +265,17 @@
             // chart1
             // 
             this.chart1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.False;
+            chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea1.AxisY.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
+            chartArea1.CursorX.IsUserEnabled = true;
+            chartArea1.CursorX.IsUserSelectionEnabled = true;
+            chartArea1.CursorY.IsUserEnabled = true;
+            chartArea1.CursorY.IsUserSelectionEnabled = true;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(37, 251);
+            this.chart1.Location = new System.Drawing.Point(50, 269);
             this.chart1.Name = "chart1";
             series1.BorderWidth = 5;
             series1.ChartArea = "ChartArea1";
@@ -509,7 +518,7 @@
             // btn_TranslateToEnglish
             // 
             this.btn_TranslateToEnglish.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TranslateToEnglish.Location = new System.Drawing.Point(894, 1);
+            this.btn_TranslateToEnglish.Location = new System.Drawing.Point(894, 11);
             this.btn_TranslateToEnglish.Name = "btn_TranslateToEnglish";
             this.btn_TranslateToEnglish.Size = new System.Drawing.Size(79, 30);
             this.btn_TranslateToEnglish.TabIndex = 0;
@@ -529,7 +538,7 @@
             // btn_SendData
             // 
             this.btn_SendData.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SendData.Location = new System.Drawing.Point(9, 142);
+            this.btn_SendData.Location = new System.Drawing.Point(7, 124);
             this.btn_SendData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_SendData.Name = "btn_SendData";
             this.btn_SendData.Size = new System.Drawing.Size(222, 30);
@@ -539,18 +548,18 @@
             // 
             // gup_OutputData
             // 
-            this.gup_OutputData.Controls.Add(this.comboBox3);
-            this.gup_OutputData.Controls.Add(this.comboBox1);
-            this.gup_OutputData.Controls.Add(this.label9);
-            this.gup_OutputData.Controls.Add(this.label2);
-            this.gup_OutputData.Controls.Add(this.comboBox2);
-            this.gup_OutputData.Controls.Add(this.label10);
+            this.gup_OutputData.Controls.Add(this.Zdirection);
+            this.gup_OutputData.Controls.Add(this.Ydirection);
+            this.gup_OutputData.Controls.Add(this.yaxis);
+            this.gup_OutputData.Controls.Add(this.zaxis);
+            this.gup_OutputData.Controls.Add(this.XDirection);
+            this.gup_OutputData.Controls.Add(this.Xaxis);
             this.gup_OutputData.Controls.Add(this.zparamtextbox);
             this.gup_OutputData.Controls.Add(this.yparamtextbox);
             this.gup_OutputData.Controls.Add(this.xparamtextbox);
             this.gup_OutputData.Controls.Add(this.btn_SendData);
             this.gup_OutputData.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gup_OutputData.Location = new System.Drawing.Point(12, 267);
+            this.gup_OutputData.Location = new System.Drawing.Point(7, 265);
             this.gup_OutputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gup_OutputData.Name = "gup_OutputData";
             this.gup_OutputData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -559,37 +568,90 @@
             this.gup_OutputData.TabStop = false;
             this.gup_OutputData.Text = "脈波參數";
             // 
-            // comboBox2
+            // Zdirection
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.Zdirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Zdirection.FormattingEnabled = true;
+            this.Zdirection.Items.AddRange(new object[] {
             "Forward",
             "Backward"});
-            this.comboBox2.Location = new System.Drawing.Point(119, 47);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.MaxDropDownItems = 2;
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 28);
-            this.comboBox2.TabIndex = 114;
-            this.comboBox2.Text = "Direction";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.Zdirection.Location = new System.Drawing.Point(117, 92);
+            this.Zdirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Zdirection.MaxDropDownItems = 2;
+            this.Zdirection.Name = "Zdirection";
+            this.Zdirection.Size = new System.Drawing.Size(99, 28);
+            this.Zdirection.TabIndex = 118;
+            this.Zdirection.Text = "Direction";
             // 
-            // label10
+            // Ydirection
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(58, 50);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 20);
-            this.label10.TabIndex = 113;
-            this.label10.Text = "X-Axis";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Ydirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ydirection.FormattingEnabled = true;
+            this.Ydirection.Items.AddRange(new object[] {
+            "Forward",
+            "Backward"});
+            this.Ydirection.Location = new System.Drawing.Point(117, 61);
+            this.Ydirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Ydirection.MaxDropDownItems = 2;
+            this.Ydirection.Name = "Ydirection";
+            this.Ydirection.Size = new System.Drawing.Size(99, 28);
+            this.Ydirection.TabIndex = 117;
+            this.Ydirection.Text = "Direction";
+            // 
+            // yaxis
+            // 
+            this.yaxis.AutoSize = true;
+            this.yaxis.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yaxis.Location = new System.Drawing.Point(56, 61);
+            this.yaxis.Name = "yaxis";
+            this.yaxis.Size = new System.Drawing.Size(54, 20);
+            this.yaxis.TabIndex = 116;
+            this.yaxis.Text = "Y-Axis";
+            this.yaxis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.yaxis.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // zaxis
+            // 
+            this.zaxis.AutoSize = true;
+            this.zaxis.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zaxis.Location = new System.Drawing.Point(56, 93);
+            this.zaxis.Name = "zaxis";
+            this.zaxis.Size = new System.Drawing.Size(54, 20);
+            this.zaxis.TabIndex = 115;
+            this.zaxis.Text = "Z-Axis";
+            this.zaxis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // XDirection
+            // 
+            this.XDirection.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XDirection.FormattingEnabled = true;
+            this.XDirection.Items.AddRange(new object[] {
+            "Forward",
+            "Backward"});
+            this.XDirection.Location = new System.Drawing.Point(117, 29);
+            this.XDirection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.XDirection.MaxDropDownItems = 2;
+            this.XDirection.Name = "XDirection";
+            this.XDirection.Size = new System.Drawing.Size(99, 28);
+            this.XDirection.TabIndex = 114;
+            this.XDirection.Text = "Direction";
+            this.XDirection.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // Xaxis
+            // 
+            this.Xaxis.AutoSize = true;
+            this.Xaxis.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Xaxis.Location = new System.Drawing.Point(56, 32);
+            this.Xaxis.Name = "Xaxis";
+            this.Xaxis.Size = new System.Drawing.Size(55, 20);
+            this.Xaxis.TabIndex = 113;
+            this.Xaxis.Text = "X-Axis";
+            this.Xaxis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // zparamtextbox
             // 
             this.zparamtextbox.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.zparamtextbox.Location = new System.Drawing.Point(14, 108);
+            this.zparamtextbox.Location = new System.Drawing.Point(12, 90);
             this.zparamtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.zparamtextbox.Name = "zparamtextbox";
             this.zparamtextbox.Size = new System.Drawing.Size(38, 27);
@@ -600,7 +662,7 @@
             // yparamtextbox
             // 
             this.yparamtextbox.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yparamtextbox.Location = new System.Drawing.Point(14, 76);
+            this.yparamtextbox.Location = new System.Drawing.Point(12, 58);
             this.yparamtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.yparamtextbox.Name = "yparamtextbox";
             this.yparamtextbox.Size = new System.Drawing.Size(38, 27);
@@ -611,7 +673,7 @@
             // xparamtextbox
             // 
             this.xparamtextbox.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xparamtextbox.Location = new System.Drawing.Point(14, 44);
+            this.xparamtextbox.Location = new System.Drawing.Point(12, 26);
             this.xparamtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.xparamtextbox.Name = "xparamtextbox";
             this.xparamtextbox.Size = new System.Drawing.Size(38, 27);
@@ -619,58 +681,15 @@
             this.xparamtextbox.Text = "0";
             this.xparamtextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label2
+            // Logo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
-            this.label2.TabIndex = 115;
-            this.label2.Text = "Z-Axis";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(58, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 20);
-            this.label9.TabIndex = 116;
-            this.label9.Text = "Y-Axis";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Forward",
-            "Backward"});
-            this.comboBox1.Location = new System.Drawing.Point(119, 79);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.MaxDropDownItems = 2;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 28);
-            this.comboBox1.TabIndex = 117;
-            this.comboBox1.Text = "Direction";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Forward",
-            "Backward"});
-            this.comboBox3.Location = new System.Drawing.Point(119, 110);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.MaxDropDownItems = 2;
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(99, 28);
-            this.comboBox3.TabIndex = 118;
-            this.comboBox3.Text = "Direction";
+            this.Logo.Image = global::Xbee_Ground_Station.Properties.Resources.公司LOGO;
+            this.Logo.Location = new System.Drawing.Point(7, 427);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(231, 147);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Logo.TabIndex = 17;
+            this.Logo.TabStop = false;
             // 
             // Form1
             // 
@@ -678,7 +697,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(981, 685);
+            this.ClientSize = new System.Drawing.Size(981, 582);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.btn_TranslateToEnglish);
             this.Controls.Add(this.gup_ComPortState);
             this.Controls.Add(this.gup_OutputData);
@@ -699,6 +719,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.gup_OutputData.ResumeLayout(false);
             this.gup_OutputData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -778,14 +799,15 @@
         protected internal System.Windows.Forms.TextBox txt_ComPortState;
         private System.Windows.Forms.Button btn_SendData;
         private System.Windows.Forms.GroupBox gup_OutputData;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox XDirection;
+        private System.Windows.Forms.Label Xaxis;
         private System.Windows.Forms.TextBox zparamtextbox;
         private System.Windows.Forms.TextBox yparamtextbox;
         private System.Windows.Forms.TextBox xparamtextbox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label yaxis;
+        private System.Windows.Forms.Label zaxis;
+        private System.Windows.Forms.ComboBox Ydirection;
+        private System.Windows.Forms.ComboBox Zdirection;
+        private System.Windows.Forms.PictureBox Logo;
     }
 }

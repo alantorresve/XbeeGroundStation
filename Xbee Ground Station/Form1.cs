@@ -255,7 +255,7 @@ namespace Xbee_Ground_Station
                 btn_close.Text = "Close";
                 gup_OutputData.Text = "Pulse Parameters";
                 label26.Text = "Output Pins";
-                label2.Text = "Parameters: 0~210";
+                zaxis.Text = "Parameters: 0~210";
                 btn_SendData.Text = "Send Command";
                 gup_InputData.Text = "Receive Options";
                 btn_ReceiveData.Text = "Start/Stop Receiving";
@@ -285,7 +285,7 @@ namespace Xbee_Ground_Station
                 btn_close.Text = "關閉";
                 gup_OutputData.Text = "脈衝參數";
                 label26.Text = "輸出腳位";
-                label2.Text = "參數:0~210";
+                zaxis.Text = "參數:0~210";
                 btn_SendData.Text = "指令上傳";
                 gup_InputData.Text = "接收選單";
                 btn_ReceiveData.Text = "下傳資料接收 開/關";
