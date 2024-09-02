@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
+using System.IO.Ports;
 using crc8_method;
 using Ground_command;
 using IEEE754;
@@ -196,16 +197,38 @@ namespace Xbee_Ground_Station
         public Form1()
         {
             InitializeComponent();
+            getCOMPorts();
         }
 
         byte[] temp_ComreaderData = new byte[1000];//214
+        private void getCOMPorts()
+        {
+            // Get all available COM ports
+            string[] ports = SerialPort.GetPortNames();
+
+            // Clear existing items in the ComboBox (if any)
+            comboCOM.Items.Clear();
+
+            // Add the COM ports to the ComboBox
+            foreach (string port in ports)
+            {
+                comboCOM.Items.Add(port);
+            }
+
+            // Optionally, select the first COM port by default
+            if (ports.Length > 0)
+            {
+                comboCOM.SelectedIndex = 0;
+            }
+        }
+           
         private void btn_Connect_Click(object sender, EventArgs e)
         {
             gup_InputData.Enabled = true;
             gup_MessageDisplay.Enabled = true;
             gup_OutputData.Enabled = true;
 
-            comReader.PortName = "COM" + comboCOM.Text;                                 //通訊阜號
+            comReader.PortName = comboCOM.Text;                                 //通訊阜號
             comReader.BaudRate = 9600;                                                   //傳輸速率
             comReader.Parity = System.IO.Ports.Parity.None;                              //同位檢查位元
             comReader.DataBits = 8;                                                      //設定每一位元組之資料位元的標準長度

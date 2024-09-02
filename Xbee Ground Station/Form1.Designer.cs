@@ -147,20 +147,10 @@
             // comboCOM
             // 
             this.comboCOM.FormattingEnabled = true;
-            this.comboCOM.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"});
-            this.comboCOM.Location = new System.Drawing.Point(174, 18);
+            this.comboCOM.Location = new System.Drawing.Point(161, 18);
             this.comboCOM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboCOM.Name = "comboCOM";
-            this.comboCOM.Size = new System.Drawing.Size(55, 27);
+            this.comboCOM.Size = new System.Drawing.Size(68, 27);
             this.comboCOM.TabIndex = 0;
             this.comboCOM.Text = "COM";
             this.comboCOM.SelectedIndexChanged += new System.EventHandler(this.comboCOM_SelectedIndexChanged);
@@ -532,10 +522,6 @@
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox3.Size = new System.Drawing.Size(172, 37);
             this.textBox3.TabIndex = 65;
-            // 
-            // comReader
-            // 
-            this.comReader.BaudRate = 38400;
             // 
             // timer_accept
             // 
