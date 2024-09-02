@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xbee Ground Station", "Xbee Ground Station\Xbee Ground Station.csproj", "{6E80587F-6C0A-44DC-9743-4C8145464199}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4822C9F-6DB7-46B3-9602-88805272ECCB}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{1BDB32EA-C46C-43A5-AD5A-A9F37430326E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,8 @@ Global
 		{6E80587F-6C0A-44DC-9743-4C8145464199}.Debug|x86.Build.0 = Debug|x86
 		{6E80587F-6C0A-44DC-9743-4C8145464199}.Release|x86.ActiveCfg = Release|x86
 		{6E80587F-6C0A-44DC-9743-4C8145464199}.Release|x86.Build.0 = Release|x86
+		{1BDB32EA-C46C-43A5-AD5A-A9F37430326E}.Debug|x86.ActiveCfg = Debug
+		{1BDB32EA-C46C-43A5-AD5A-A9F37430326E}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

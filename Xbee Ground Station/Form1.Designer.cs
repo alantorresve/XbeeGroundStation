@@ -308,7 +308,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(50, 256);
+            this.chart1.Location = new System.Drawing.Point(26, 278);
             this.chart1.Name = "chart1";
             series1.BorderWidth = 5;
             series1.ChartArea = "ChartArea1";
@@ -343,16 +343,19 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(496, 178);
+            this.textBox6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(496, 179);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(223, 27);
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(160, 37);
             this.textBox6.TabIndex = 72;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(437, 186);
+            this.label7.Location = new System.Drawing.Point(437, 183);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 19);
             this.label7.TabIndex = 71;
@@ -361,10 +364,10 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(441, 148);
+            this.button3.Location = new System.Drawing.Point(440, 148);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(278, 26);
+            this.button3.Size = new System.Drawing.Size(216, 26);
             this.button3.TabIndex = 64;
             this.button3.Text = "清除";
             this.button3.UseVisualStyleBackColor = true;
@@ -383,7 +386,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 212);
+            this.label5.Location = new System.Drawing.Point(452, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 19);
             this.label5.TabIndex = 70;
@@ -392,7 +395,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(224, 217);
+            this.label4.Location = new System.Drawing.Point(224, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 19);
             this.label4.TabIndex = 69;
@@ -401,7 +404,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 217);
+            this.label3.Location = new System.Drawing.Point(5, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 19);
             this.label3.TabIndex = 68;
@@ -410,11 +413,13 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(496, 209);
+            this.textBox5.Location = new System.Drawing.Point(496, 228);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 37);
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(160, 37);
             this.textBox5.TabIndex = 67;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label16
             // 
@@ -441,8 +446,10 @@
             this.textBox20.Location = new System.Drawing.Point(50, 179);
             this.textBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox20.Name = "textBox20";
+            this.textBox20.ReadOnly = true;
             this.textBox20.Size = new System.Drawing.Size(383, 27);
             this.textBox20.TabIndex = 40;
+            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_MessageIn
             // 
@@ -450,6 +457,7 @@
             this.txt_MessageIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MessageIn.Multiline = true;
             this.txt_MessageIn.Name = "txt_MessageIn";
+            this.txt_MessageIn.ReadOnly = true;
             this.txt_MessageIn.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_MessageIn.Size = new System.Drawing.Size(340, 82);
             this.txt_MessageIn.TabIndex = 3;
@@ -460,8 +468,10 @@
             this.textBox2.Location = new System.Drawing.Point(50, 148);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(383, 27);
             this.textBox2.TabIndex = 7;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -496,11 +506,13 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(273, 210);
+            this.textBox4.Location = new System.Drawing.Point(273, 229);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(160, 37);
             this.textBox4.TabIndex = 66;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_MessageOut
             // 
@@ -508,6 +520,7 @@
             this.txt_MessageOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MessageOut.Multiline = true;
             this.txt_MessageOut.Name = "txt_MessageOut";
+            this.txt_MessageOut.ReadOnly = true;
             this.txt_MessageOut.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_MessageOut.Size = new System.Drawing.Size(364, 82);
             this.txt_MessageOut.TabIndex = 0;
@@ -516,12 +529,14 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(50, 210);
+            this.textBox3.Location = new System.Drawing.Point(50, 229);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(172, 37);
+            this.textBox3.Size = new System.Drawing.Size(160, 37);
             this.textBox3.TabIndex = 65;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer_accept
             // 
