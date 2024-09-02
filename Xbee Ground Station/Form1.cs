@@ -37,31 +37,7 @@ namespace Xbee_Ground_Station
 
         string X_TXT, Y_TXT, Z_TXT, YTT;
 
-        /*
-This code provides an interface that allows a user to send and receive data.
-The code starts by defining a pictureBox1_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines 3 string variables, a Double variable, and a rad_OnOff_CheckedChanged function.
-The code then defines a label8_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a chart1_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a lab_InputData_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a label2_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a txt_OutputData_TextChanged function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a button3_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a txt_MessageIn_TextChanged function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a gup_MessageDisplay_Enter function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a txt_ComPortState_TextChanged function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a txt_MessageOut_TextChanged function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines 4 string variables.
-The code then defines a label6_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a Form1 function that does not take any parameters and does not return anything.
-The code then defines a btn_Connect_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a btn_close_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a btn_SendData_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a btn_ClearOutputData_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a btn_ClearInputData_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-The code then defines a btn_ReceiveData_Click function that takes a sender and an EventArgs as parameters and does not return anything.
-*/
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btn_Translate_Click(object sender, EventArgs e)
         {
 
         }
