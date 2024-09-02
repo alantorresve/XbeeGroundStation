@@ -27,6 +27,7 @@ namespace Xbee_Ground_Station
         private string allstr = null;
         StreamWriter writer;
         int TurnOnandOff = 0;
+        private bool isEnglish=false;
 
 
 
@@ -39,7 +40,68 @@ namespace Xbee_Ground_Station
 
         private void btn_Translate_Click(object sender, EventArgs e)
         {
+            if (!isEnglish)
+            {
+                // Switch to English
+                gup_ComPortState.Text = "COM Port Status";
+                Label1.Text = "Select COM Port";
+                btn_Connect.Text = "Connect";
+                btn_close.Text = "Close";
+                gup_OutputData.Text = "Pulse Parameters";
+                btn_SendData.Text = "Send Command";
+                gup_InputData.Text = "Receive Options";
+                btn_ReceiveData.Text = "Start/Stop Receiving";
+                gup_MessageDisplay.Text = "Main System Status";
+                lab_InputData.Text = "Received Data";
+                lab_OutputData.Text = "Output Data";
+                btn_ClearOutputData.Text = "Clear Sent Data";
+                btn_ClearInputData.Text = "Clear Received Data";
+                button3.Text = "Clear";
+                label16.Text = "Time";
+                label3.Text = "X(uT)";
+                label4.Text = "Y(uT)";
+                label5.Text = "Z(uT)";
+                label6.Text = "Data";
+                label7.Text = "ALL(uT)";
+                btn_Translate.Text = "中文";
+                isEnglish = true;
 
+                /*btn_ResetChartView.Text = "Reset View";
+                XDirection.Text = "Direction";
+                YDirection.Text = "Direction";
+                ZDirection.Text = "Direction";*/
+            }
+            else
+            {
+                // Switch to Chinese
+                gup_ComPortState.Text = "串列埠狀態";
+                Label1.Text = "串列埠 選擇";
+                btn_Connect.Text = "串列埠連接";
+                btn_close.Text = "關閉";
+                gup_OutputData.Text = "脈衝參數";
+                btn_SendData.Text = "指令上傳";
+                gup_InputData.Text = "接收選單";
+                btn_ReceiveData.Text = "下傳資料接收 開/關";
+                gup_MessageDisplay.Text = "主系統狀態";
+                lab_InputData.Text = "接收資料";
+                lab_OutputData.Text = "輸出資料";
+                btn_ClearOutputData.Text = "清除上傳資料";
+                btn_ClearInputData.Text = "清除下傳資料";
+                button3.Text = "清除";
+                label16.Text = "時間";
+                label3.Text = "X(uT)";
+                label4.Text = "Y(uT)";
+                label5.Text = "Z(uT)";
+                label7.Text = "ALL(uT)";
+                btn_Translate.Text = "English";
+                isEnglish = false;
+
+                /*btn_RefreshPorts.Text = "刷新";               
+                btn_ResetChartView.Text = "重置視圖";                
+                XDirection.Text = "方向";
+                YDirection.Text = "方向";
+                ZDirection.Text = "方向";*/
+            }
         }
 
         string X_HMC, Y_HMC, Z_HMC;

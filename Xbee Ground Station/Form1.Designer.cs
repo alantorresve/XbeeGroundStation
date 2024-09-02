@@ -108,6 +108,7 @@
             this.txt_ComPortState.Location = new System.Drawing.Point(12, 48);
             this.txt_ComPortState.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_ComPortState.Name = "txt_ComPortState";
+            this.txt_ComPortState.ReadOnly = true;
             this.txt_ComPortState.Size = new System.Drawing.Size(217, 27);
             this.txt_ComPortState.TabIndex = 3;
             this.txt_ComPortState.TextChanged += new System.EventHandler(this.txt_ComPortState_TextChanged);
@@ -156,12 +157,12 @@
             "7",
             "8",
             "9"});
-            this.comboCOM.Location = new System.Drawing.Point(179, 18);
+            this.comboCOM.Location = new System.Drawing.Point(174, 18);
             this.comboCOM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboCOM.Name = "comboCOM";
-            this.comboCOM.Size = new System.Drawing.Size(50, 27);
+            this.comboCOM.Size = new System.Drawing.Size(55, 27);
             this.comboCOM.TabIndex = 0;
-            this.comboCOM.Text = "4";
+            this.comboCOM.Text = "COM";
             this.comboCOM.SelectedIndexChanged += new System.EventHandler(this.comboCOM_SelectedIndexChanged);
             // 
             // gup_OutputData
@@ -382,7 +383,7 @@
             // lab_InputData
             // 
             this.lab_InputData.AutoSize = true;
-            this.lab_InputData.Location = new System.Drawing.Point(395, 26);
+            this.lab_InputData.Location = new System.Drawing.Point(395, 28);
             this.lab_InputData.Name = "lab_InputData";
             this.lab_InputData.Size = new System.Drawing.Size(73, 19);
             this.lab_InputData.TabIndex = 5;
@@ -436,10 +437,10 @@
             // 
             // btn_ClearInputData
             // 
-            this.btn_ClearInputData.Location = new System.Drawing.Point(474, 24);
+            this.btn_ClearInputData.Location = new System.Drawing.Point(519, 22);
             this.btn_ClearInputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ClearInputData.Name = "btn_ClearInputData";
-            this.btn_ClearInputData.Size = new System.Drawing.Size(245, 30);
+            this.btn_ClearInputData.Size = new System.Drawing.Size(200, 30);
             this.btn_ClearInputData.TabIndex = 4;
             this.btn_ClearInputData.Text = "清除下傳資料";
             this.btn_ClearInputData.UseVisualStyleBackColor = true;
@@ -493,10 +494,10 @@
             // 
             // btn_ClearOutputData
             // 
-            this.btn_ClearOutputData.Location = new System.Drawing.Point(82, 23);
+            this.btn_ClearOutputData.Location = new System.Drawing.Point(173, 22);
             this.btn_ClearOutputData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ClearOutputData.Name = "btn_ClearOutputData";
-            this.btn_ClearOutputData.Size = new System.Drawing.Size(291, 30);
+            this.btn_ClearOutputData.Size = new System.Drawing.Size(200, 30);
             this.btn_ClearOutputData.TabIndex = 1;
             this.btn_ClearOutputData.Text = "清除上傳資料";
             this.btn_ClearOutputData.UseVisualStyleBackColor = true;
@@ -561,7 +562,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 105;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_Translate
             // 
