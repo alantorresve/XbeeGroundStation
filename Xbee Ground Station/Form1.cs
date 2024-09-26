@@ -65,6 +65,7 @@ namespace Xbee_Ground_Station
                 label6.Text = "Data";
                 label7.Text = "ALL(uT)";
                 btn_Translate.Text = "中文";
+                label26.Text = "Output Pin \n Parameter 0~255";
                 isEnglish = true;
 
                 /*btn_ResetChartView.Text = "Reset View";
@@ -95,6 +96,7 @@ namespace Xbee_Ground_Station
                 label5.Text = "Z(uT)";
                 label7.Text = "ALL(uT)";
                 btn_Translate.Text = "English";
+                label26.Text = "輸出腳位 \n 參數: 0~210";
                 isEnglish = false;
 
                 /*btn_RefreshPorts.Text = "刷新";               

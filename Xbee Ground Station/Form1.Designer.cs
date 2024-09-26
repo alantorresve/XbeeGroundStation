@@ -177,9 +177,8 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 19);
+            this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 104;
-            this.label2.Text = "參數:0~210";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
@@ -196,9 +195,9 @@
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(5, 30);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(73, 19);
+            this.label26.Size = new System.Drawing.Size(85, 38);
             this.label26.TabIndex = 102;
-            this.label26.Text = "輸出腳位";
+            this.label26.Text = "輸出腳位\r\n參數:0~210";
             // 
             // btn_SendData
             // 
