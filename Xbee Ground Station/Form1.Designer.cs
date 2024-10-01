@@ -217,7 +217,7 @@
             this.txt_OutputData.Name = "txt_OutputData";
             this.txt_OutputData.Size = new System.Drawing.Size(129, 27);
             this.txt_OutputData.TabIndex = 0;
-            this.txt_OutputData.Text = "3";
+            this.txt_OutputData.Text = "2";
             this.txt_OutputData.TextChanged += new System.EventHandler(this.txt_OutputData_TextChanged);
             // 
             // gup_InputData
