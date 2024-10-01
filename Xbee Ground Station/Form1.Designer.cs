@@ -193,7 +193,8 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(5, 30);
+            this.label26.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label26.Location = new System.Drawing.Point(3, 22);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(85, 38);
             this.label26.TabIndex = 102;
@@ -636,7 +637,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox20;
         internal System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox textBox1;
@@ -652,6 +652,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Translate;
+        private System.Windows.Forms.Label label26;
     }
 }
 
